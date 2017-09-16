@@ -1,0 +1,23 @@
+<h2>Show picture</h2>
+
+<ul>
+
+  <li>
+    <strong>Filename:</strong>
+    <%= @picture.filename %>
+  </li>
+
+  <li>
+    <strong>Md5:</strong>
+    <%= @picture.md5 %>
+  </li>
+
+  <li>
+    <strong>Possible source:</strong>
+    <%= @picture.possible_source %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: picture_path(@conn, :edit, @picture) %>
+<%= link "Back", to: picture_path(@conn, :index) %>

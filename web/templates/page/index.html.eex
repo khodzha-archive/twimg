@@ -1,0 +1,12 @@
+<div class="row marketing">
+  <%= form_for @conn, picture_path(@conn, :create_multiple), [as: :pictures, multipart: true], fn f -> %>
+    <div class="form-group">
+      <%= label f, :files, class: "control-label" %>
+      <%= file_input f, :files, multiple: true, class: "form-control" %>
+      <%= error_tag f, :files %>
+    </div>
+    <div class="form-group">
+      <%= submit "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
